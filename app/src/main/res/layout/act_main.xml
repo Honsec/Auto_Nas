@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:onClick="profile_refresh"
+        android:layout_width="match_parent"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        android:minHeight="52dp">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/btn_king_norma"/>
+        <ProgressBar
+            android:id="@+id/id_main_progress"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:indeterminate="true"
+            android:layout_marginLeft="8dp"
+            />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/id_main_nickname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|left"
+                android:textSize="16sp"
+                android:layout_marginLeft="8dp"
+                android:textColor="#F5BF44"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/id_main_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|left"
+                android:textSize="14sp"
+                android:layout_marginLeft="8dp"
+                android:textColor="#F5BF44"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/id_main_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|left"
+            android:textSize="17sp"
+            android:layout_marginLeft="8dp"
+            android:textColor="#FFD200"
+            android:textStyle="bold"
+            />
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/icon_h_ts2"/>
+    </LinearLayout>
+
+
+    <genius.baselib.frame.util.AutoSwipeListener
+        android:id="@+id/id_main_swipe"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/id_main_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+    </genius.baselib.frame.util.AutoSwipeListener>
+
+</LinearLayout>

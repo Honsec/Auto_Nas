@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">티끌모아티끌</string>
+    <string name="close_app">Press again to close App</string>
+    <string name="nas_already_end">광고 종료됨</string>
+    <string name="nas_already_complete">이미 참여 완료한 광고</string>
+    <string name="nas_start_part">참여신청하겠습니까?</string>
+    <string name="nas_failed_part">참여 실패</string>
+    <string name="nas_start_mission_failed">참여성공하였으나 미션시작 실패!</string>
+</resources>

@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp" >
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/default_footer_progressbar"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:visibility="invisible"
+            app:indicator="Pacman"
+            android:layout_centerInParent="true"
+            app:indicator_color="#868686"
+        />
+
+
+        <TextView
+            android:id="@+id/default_footer_title"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#777777"
+            android:text="" />
+    </RelativeLayout>
+
+</LinearLayout>

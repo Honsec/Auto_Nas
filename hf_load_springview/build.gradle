@@ -1,0 +1,48 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+/*
+*   case R.id.overlap:
+                springView.setType(SpringView.Type.OVERLAP);
+                break;
+            case R.id.follow:
+                springView.setType(SpringView.Type.FOLLOW);
+                break;
+            case R.id.both:
+                springView.setGive(SpringView.Give.BOTH);
+                break;
+            case R.id.top:
+                springView.setGive(SpringView.Give.TOP);
+                break;
+            case R.id.bottom:
+                springView.setGive(SpringView.Give.BOTTOM);
+                break;
+            case R.id.none:
+                springView.setGive(SpringView.Give.NONE);
+                break;
+* */
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.0.0'
+    //https://github.com/liaoinstan/SpringView
+    //    compile 'com.liaoinstan.springview:library:1.2.5'
+    compile project(':loadingindicator')
+}

@@ -1,0 +1,13 @@
+<resources>
+    <string name="default_loadmore">加载更多</string>
+    <string name="default_loading">加载中</string>
+    <string name="default_loadrelease">松开刷新</string>
+    <string name="default_load_pull">下拉刷新</string>
+    <string name="before_hour">小时前</string>
+    <string name="before_minute">分前</string>
+    <string name="before_day">日前</string>
+    <string name="before_now">刚刚</string>
+    <string name="last_refreshtime">最近刷新时间:</string>
+    <string name="before_first">第一次</string>
+
+</resources>
