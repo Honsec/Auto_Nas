@@ -1,6 +1,7 @@
 package genius.baselib.frame.util;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
@@ -15,7 +16,9 @@ import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 
 import genius.baselib.PreferenceUtil;
+import genius.baselib.frame.auto.AutoService;
 import genius.baselib.frame.center.CStatic;
+import genius.baselib.frame.view.SplashAct;
 import genius.utils.encode.AES256Cipher;
 
 /**
@@ -79,6 +82,18 @@ public class CTools {
     }
 
     public static void logout(Context mContext) {
+        Intent intent = new Intent(mContext, SplashAct.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK| Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        mContext.startActivity(intent);
 
     }
+
+    public static void startAuto(Context mContext){
+        Intent intent2 = new Intent(mContext, AutoService.class);
+        intent2.setAction(AutoService.START);
+        intent2.putExtra(AutoService.AUTO,true);
+        mContext.startService(intent2);
+    }
+
+
 }

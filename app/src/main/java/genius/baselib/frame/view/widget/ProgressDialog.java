@@ -79,7 +79,7 @@ public class ProgressDialog extends Dialog {
 
 	@Override
 	public void onBackPressed() {
-		
+
 		dismiss();
 		super.onBackPressed();
 	}

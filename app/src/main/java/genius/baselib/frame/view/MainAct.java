@@ -31,6 +31,7 @@ import genius.baselib.frame.center.CConfig;
 import genius.baselib.frame.center.CStatic;
 import genius.baselib.frame.inter.GoogleUserInfo;
 import genius.baselib.frame.util.AutoSwipeListener;
+import genius.baselib.frame.util.CTools;
 import genius.baselib.inter.ClickFilter;
 import genius.commonrecyclerviewadpater.CommonAdapter;
 import genius.commonrecyclerviewadpater.base.ViewHolder;
@@ -59,6 +60,9 @@ public class MainAct extends BaseAct {
 
     @Override
     protected void viewLoadFinished() {
+
+        //유저정보중 계정으로 나스 초기화
+        NASWall.init(MainAct.this, CConfig.is_debug, PreferenceUtil.getInstance(getApplicationContext()).getValue(CStatic.SP_ACCOUNT,CTools.getIMEI(getApplicationContext())));
 
         getUerInfo(true);
 //        NASWall.openCS();
@@ -129,6 +133,13 @@ public class MainAct extends BaseAct {
         id_main_point = findViewBId(R.id.id_main_point);
         id_main_nickname = findViewBId(R.id.id_main_nickname);
         id_main_account = findViewBId(R.id.id_main_account);
+        findViewBId(R.id.id_main_profile_icon).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(clickFilter.isClicked())return;
+                CTools.startAuto(MainAct.this);
+            }
+        });
         id_main_progress = findViewBId(R.id.id_main_progress);
         id_main_recyclerview.setLayoutManager(new LinearLayoutManager(this));
         id_main_recyclerview.setHasFixedSize(true);
@@ -236,6 +247,7 @@ public class MainAct extends BaseAct {
                                 public void OnSuccess(NASWallAdInfo nasWallAdInfo, String url) {
                                     try {
                                         Intent intent = Intent.parseUri(url, 0);
+                                        intent.setAction(Intent.ACTION_VIEW);
                                         if (intent != null) {
                                             startActivity(intent);
                                         }
@@ -243,6 +255,7 @@ public class MainAct extends BaseAct {
                                     } catch (URISyntaxException e) {
                                         e.printStackTrace();
                                     }
+
                                     Toast.makeText(MainAct.this, R.string.nas_start_mission_failed, Toast.LENGTH_SHORT).show();
                                 }
 

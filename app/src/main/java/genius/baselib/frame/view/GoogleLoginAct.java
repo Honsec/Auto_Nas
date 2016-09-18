@@ -12,10 +12,13 @@ import android.widget.Toast;
 
 import com.genius.hongsec.nasa.R;
 
+import genius.baselib.PreferenceUtil;
 import genius.baselib.frame.base.BaseAct;
+import genius.baselib.frame.center.CStatic;
 import genius.baselib.inter.ClickFilter;
 import genius.utils.UtilsActivity;
 import genius.utils.UtilsLog;
+import genius.utils.UtilsSP;
 
 /**
  * Created by Hongsec on 2016-09-07.
@@ -93,9 +96,12 @@ public class GoogleLoginAct extends BaseAct {
 
             if (url.startsWith("https://play.google.com/store")) {
 
+                UtilsSP instance = PreferenceUtil.getInstance(getApplicationContext());
+                instance.setValue(CStatic.SP_LOGINSTATE,true);
+
                 // 로그인 성공
                 Intent intent = new Intent(GoogleLoginAct.this, MainAct.class);
-                intent.setFlags(  Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                intent.setFlags( Intent.FLAG_ACTIVITY_SINGLE_TOP);
                 startActivity(intent);
                 GoogleLoginAct.this.finish();
 

@@ -6,4 +6,5 @@
     <string name="nas_start_part">참여신청하겠습니까?</string>
     <string name="nas_failed_part">참여 실패</string>
     <string name="nas_start_mission_failed">참여성공하였으나 미션시작 실패!</string>
+    <string name="check_login">로그인체크</string>
 </resources>

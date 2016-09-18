@@ -27,4 +27,6 @@ public class CStatic {
     public static final String SP_GOOGNICKNAME = "goglenickname";
     public static final String SP_NICKNAME = "nickname";
     public static final String SP_ACCOUNT = "account";
+    public static final String SP_LOGINSTATE = "login_state";
+    public static final String SP_KEY_ONLYWIFI = "onluwifi";
 }

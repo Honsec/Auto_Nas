@@ -1,5 +1,6 @@
 package genius.baselib.frame.db;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
@@ -11,7 +12,7 @@ import genius.baselib.frame.base.BaseDB;
 public class DB_Install extends BaseDB {
     public static final String DB_NAME = "db_apps";
     public static final String TABLE_INSTALLED = "db_install";
-    protected final static int DB_APP_VERSION = 3;
+    protected final static int DB_APP_VERSION = 4;
 
 
     public DB_Install(Context context,SQLiteDatabase.CursorFactory factory) {
@@ -29,6 +30,16 @@ public class DB_Install extends BaseDB {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_INSTALLED);
         onCreate(db);
     }
+
+
+    public void insertOrupdate(String pkg , String state){
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(COLUMN_INSTALL.pkg,pkg);
+        contentValues.put(COLUMN_INSTALL.state,state);
+
+        update(TABLE_INSTALLED,contentValues,null,COLUMN_INSTALL.pkg+"=?",new String[]{pkg},null,null,null);
+    }
+
 
 
     private static class COLUMN_INSTALL {

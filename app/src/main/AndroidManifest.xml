@@ -54,9 +54,31 @@
         </activity>
 
 
+        <receiver android:name="genius.baselib.frame.receiver.InstallListener">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_INSTALL" />
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <!-- <action android:name="android.intent.action.PACKAGE_REMOVED" /> -->
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="genius.baselib.frame.auto.AppInstalledReceiver">
 
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_INSTALL" />
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <!-- <action android:name="android.intent.action.PACKAGE_REMOVED" /> -->
+                <data android:scheme="package" />
+            </intent-filter>
 
+        </receiver>
+        <receiver android:name="genius.baselib.frame.auto.AlarmReceiver"/>
+        <service android:name="genius.baselib.frame.auto.AutoService">
 
+        </service>
+        <service android:name="genius.baselib.frame.service.UpdateApps">
+
+        </service>
 
         <!-- NAS - App Key - 반드시 추가 해야함 -->
         <meta-data android:name="naswall_app_key" android:value="86ea90ea321d6a55d8250fdddfecb22a" />
@@ -74,6 +96,7 @@
                 <category android:name= "android.intent.category.BROWSABLE" />
                 <data android:scheme="genius"/>
             </intent-filter>
+
 
         </activity>
 

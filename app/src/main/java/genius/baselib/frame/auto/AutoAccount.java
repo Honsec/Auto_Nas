@@ -11,9 +11,13 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import genius.baselib.PreferenceUtil;
+import genius.baselib.frame.center.CStatic;
 import genius.baselib.frame.inter.CheckLoginResult;
 import genius.baselib.frame.inter.GoogleUserInfo;
+import genius.baselib.frame.util.CTools;
 import genius.utils.UtilsLog;
+import genius.utils.UtilsSP;
 
 
 /**
@@ -22,6 +26,31 @@ import genius.utils.UtilsLog;
  */
 public class AutoAccount {
 
+
+    private static WebView webview;
+    private static MyGoogleUserInfoInterface result_interface;
+
+    /**
+     *  로그인 체크가 안되는 폰을 위해서 이거 쓰기로 했으
+     * @param activity
+     * @param checkLoginResult
+     */
+    public static void checklogin(Activity activity,CheckLoginResult checkLoginResult){
+
+        UtilsSP instance = PreferenceUtil.getInstance(activity.getApplicationContext());
+        if(instance.getValue(CStatic.SP_LOGINSTATE,false)){
+            if(checkLoginResult!=null){
+                checkLoginResult.result(true);
+            }
+
+        }else{
+            if(checkLoginResult!=null){
+                checkLoginResult.result(false);
+            }
+        }
+
+    }
+/*
 
     public static void checklogin(Activity act, final CheckLoginResult checkLoginResult) {
 
@@ -77,9 +106,10 @@ public class AutoAccount {
         webview.loadUrl("https://play.google.com/store/account");
 
     }
-    public static void getUserInfo(Activity act, final GoogleUserInfo checkLoginResult) {
+*/
+    public static void getUserInfo(final Activity act, final GoogleUserInfo checkLoginResult) {
 
-        final WebView webview = new WebView(act);
+        webview = new WebView(act);
         webview.setWebChromeClient(new WebChromeClient() {
         });
         webview.setWebViewClient(new WebViewClient() {
@@ -88,7 +118,11 @@ public class AutoAccount {
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
                 UtilsLog.v("demo", "PageFinished:" + url);
-                //
+                if(url.contains("javascript:")){
+
+                    result_interface.getUserInfo(CTools.getIMEI(act.getApplicationContext()),CTools.getIMEI(act.getApplicationContext()));
+                    return;
+                }
                 webview.loadUrl(" javascript:\n" +
                         "\n" +
                         "            {\n" +
@@ -122,7 +156,7 @@ public class AutoAccount {
         set.setSupportMultipleWindows(true);
         set.setDatabaseEnabled(true);
         set.setDomStorageEnabled(true);
-        webview.addJavascriptInterface(new MyGoogleUserInfoInterface(checkLoginResult), "android");
+        webview.addJavascriptInterface(result_interface = new MyGoogleUserInfoInterface(checkLoginResult), "android");
         set.setUseWideViewPort(true);
         set.setLoadWithOverviewMode(true);
         set.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
@@ -185,9 +219,14 @@ public class AutoAccount {
             if (googleUserInfo != null) {
                 googleUserInfo.result(nickname,account);
             }
+            if(webview!=null){
+                webview.stopLoading();
+                webview.setWebChromeClient(null);
+                webview.setWebViewClient(null);
+                webview.destroy();
+                webview = null;
+            }
             UtilsLog.d("userinfo:" +nickname+",account:"+account);
         }
-
-
     }
 }

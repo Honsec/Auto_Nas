@@ -11,6 +11,7 @@ import com.genius.hongsec.nasa.R;
 import genius.baselib.frame.auto.AutoAccount;
 import genius.baselib.frame.base.BaseAct;
 import genius.baselib.frame.inter.CheckLoginResult;
+import genius.baselib.frame.service.UpdateApps;
 import genius.baselib.inter.ClickFilter;
 
 /**
@@ -25,6 +26,13 @@ public class SplashAct extends BaseAct {
     @Override
     protected void viewLoadFinished() {
         if (CheckPermission_request(permissions, 1)) return;
+
+        //앱 올림
+        Intent service = new Intent(SplashAct.this, UpdateApps.class);
+        service.setAction(UpdateApps.UPLOAD);
+        startService(service);
+
+
         doActions();
     }
 
@@ -35,12 +43,12 @@ public class SplashAct extends BaseAct {
             @Override
             public void result(boolean islogined) {
                 cancleLoading();
-                if(islogined){
-                    Intent intent = new Intent(SplashAct.this,MainAct.class);
+                if (islogined) {
+                    Intent intent = new Intent(SplashAct.this, MainAct.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
                     startActivity(intent);
-                }else{
-                    Intent intent = new Intent(SplashAct.this,GoogleLoginAct.class);
+                } else {
+                    Intent intent = new Intent(SplashAct.this, GoogleLoginAct.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
                     startActivity(intent);
                 }
@@ -65,7 +73,6 @@ public class SplashAct extends BaseAct {
     }
 
 
-
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -80,7 +87,7 @@ public class SplashAct extends BaseAct {
                     }
                 }
 
-                if(!flag){
+                if (!flag) {
                     doActions();
                 }
 
@@ -96,9 +103,9 @@ public class SplashAct extends BaseAct {
 
     @Override
     public void onBackPressed() {
-        if(closeApp.isClicked()){
+        if (closeApp.isClicked()) {
             super.onBackPressed();
-        }else{
+        } else {
             Toast.makeText(SplashAct.this, R.string.close_app, Toast.LENGTH_SHORT).show();
         }
 
