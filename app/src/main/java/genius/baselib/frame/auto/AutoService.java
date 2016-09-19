@@ -11,7 +11,9 @@ import com.nextapps.naswall.NASWallAdInfo;
 import java.util.ArrayList;
 
 import genius.baselib.PreferenceUtil;
+import genius.baselib.frame.center.CConfig;
 import genius.baselib.frame.center.CStatic;
+import genius.baselib.frame.util.CTools;
 import genius.utils.UtilsLog;
 
 /**
@@ -55,7 +57,7 @@ public class AutoService extends Service {
             final AutoInstallHelper autoInstallHelper = AutoInstallHelper.getInstance();
             autoInstallHelper.init(this, null);
 
-
+            NASWall.init(AutoService.this, CConfig.is_debug, PreferenceUtil.getInstance(getApplicationContext()).getValue(CStatic.SP_ACCOUNT, CTools.getIMEI(getApplicationContext())));
             //call nas ad list
             NASWall.getAdList(AutoService.this, PreferenceUtil.getInstance(getApplicationContext()).getValue(CStatic.SP_ACCOUNT, ""), new NASWall.OnAdListListener() {
                 @Override
@@ -72,7 +74,9 @@ public class AutoService extends Service {
                         }
 
                     }
-                    prepare(autoInstallHelper, nasWallAdInfos);
+                    if(nasWallAdInfos.size()>0){
+                        prepare(autoInstallHelper, nasWallAdInfos);
+                    }
 
                 }
 
