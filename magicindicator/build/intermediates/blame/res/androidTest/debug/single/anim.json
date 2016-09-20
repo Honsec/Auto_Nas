@@ -1,7 +1,43 @@
 [
     {
+        "merged": "E:\\android_studio_code\\Auto_Nas\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_popup_exit.xml",
+        "source": "E:\\android_studio_code\\Auto_Nas\\magicindicator\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "E:\\android_studio_code\\Auto_Nas\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "E:\\android_studio_code\\Auto_Nas\\magicindicator\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
         "merged": "C:\\IDE\\android\\work\\Auto_Nas\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_in_top.xml",
         "source": "C:\\IDE\\android\\work\\Auto_Nas\\magicindicator\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "E:\\android_studio_code\\Auto_Nas\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "E:\\android_studio_code\\Auto_Nas\\magicindicator\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "E:\\android_studio_code\\Auto_Nas\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_popup_enter.xml",
+        "source": "E:\\android_studio_code\\Auto_Nas\\magicindicator\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "E:\\android_studio_code\\Auto_Nas\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_fade_out.xml",
+        "source": "E:\\android_studio_code\\Auto_Nas\\magicindicator\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "C:\\IDE\\android\\work\\Auto_Nas\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\IDE\\android\\work\\Auto_Nas\\magicindicator\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "C:\\IDE\\android\\work\\Auto_Nas\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_popup_enter.xml",
+        "source": "C:\\IDE\\android\\work\\Auto_Nas\\magicindicator\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "C:\\IDE\\android\\work\\Auto_Nas\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_fade_out.xml",
+        "source": "C:\\IDE\\android\\work\\Auto_Nas\\magicindicator\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "E:\\android_studio_code\\Auto_Nas\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "E:\\android_studio_code\\Auto_Nas\\magicindicator\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\anim\\abc_slide_out_bottom.xml"
     },
     {
         "merged": "C:\\IDE\\android\\work\\Auto_Nas\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_out_bottom.xml",
@@ -12,16 +48,16 @@
         "source": "C:\\IDE\\android\\work\\Auto_Nas\\magicindicator\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\anim\\abc_slide_in_bottom.xml"
     },
     {
-        "merged": "C:\\IDE\\android\\work\\Auto_Nas\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_fade_out.xml",
-        "source": "C:\\IDE\\android\\work\\Auto_Nas\\magicindicator\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\anim\\abc_fade_out.xml"
+        "merged": "E:\\android_studio_code\\Auto_Nas\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "E:\\android_studio_code\\Auto_Nas\\magicindicator\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\anim\\abc_slide_in_top.xml"
     },
     {
-        "merged": "C:\\IDE\\android\\work\\Auto_Nas\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_popup_enter.xml",
-        "source": "C:\\IDE\\android\\work\\Auto_Nas\\magicindicator\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\anim\\abc_popup_enter.xml"
+        "merged": "E:\\android_studio_code\\Auto_Nas\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "E:\\android_studio_code\\Auto_Nas\\magicindicator\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
     },
     {
-        "merged": "C:\\IDE\\android\\work\\Auto_Nas\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
-        "source": "C:\\IDE\\android\\work\\Auto_Nas\\magicindicator\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+        "merged": "E:\\android_studio_code\\Auto_Nas\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_fade_in.xml",
+        "source": "E:\\android_studio_code\\Auto_Nas\\magicindicator\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\anim\\abc_fade_in.xml"
     },
     {
         "merged": "C:\\IDE\\android\\work\\Auto_Nas\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_fade_in.xml",
@@ -32,11 +68,15 @@
         "source": "C:\\IDE\\android\\work\\Auto_Nas\\magicindicator\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\anim\\abc_slide_out_top.xml"
     },
     {
-        "merged": "C:\\IDE\\android\\work\\Auto_Nas\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_popup_exit.xml",
-        "source": "C:\\IDE\\android\\work\\Auto_Nas\\magicindicator\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\anim\\abc_popup_exit.xml"
+        "merged": "E:\\android_studio_code\\Auto_Nas\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "E:\\android_studio_code\\Auto_Nas\\magicindicator\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\anim\\abc_slide_out_top.xml"
     },
     {
         "merged": "C:\\IDE\\android\\work\\Auto_Nas\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
         "source": "C:\\IDE\\android\\work\\Auto_Nas\\magicindicator\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "C:\\IDE\\android\\work\\Auto_Nas\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_popup_exit.xml",
+        "source": "C:\\IDE\\android\\work\\Auto_Nas\\magicindicator\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\anim\\abc_popup_exit.xml"
     }
 ]

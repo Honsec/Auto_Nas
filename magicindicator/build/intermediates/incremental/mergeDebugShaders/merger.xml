@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="C:\IDE\android\work\Auto_Nas\magicindicator\src\main\shaders"/></dataSet><dataSet config="debug"><source path="C:\IDE\android\work\Auto_Nas\magicindicator\src\debug\shaders"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="E:\android_studio_code\Auto_Nas\magicindicator\src\main\shaders"/></dataSet><dataSet config="debug"><source path="E:\android_studio_code\Auto_Nas\magicindicator\src\debug\shaders"/></dataSet></merger>
